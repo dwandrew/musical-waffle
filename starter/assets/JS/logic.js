@@ -1,5 +1,3 @@
-
-
 // AS A coding boot camp student
 // I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
 // SO THAT I can gauge my progress compared to my peers
@@ -20,7 +18,8 @@ function clickStart () {
         
         countDown();
         hideStart();
-        
+        showQuestion1();
+               
     });
 }
 clickStart();
@@ -34,6 +33,17 @@ function hideStart () {
     document.getElementById("start-screen").hidden = true;
 }
 
+function showQuestion1 () { 
+    document.getElementById("questions").className = "start"; 
+    document.querySelector("#questions").textContent = quizQuestions[1]; 
+    
+    // How to send part of the array out as a text 
+    
+    
+    console.log(swine);
+
+
+} 
 // sets timer - Works!
 
 var timeLeft = 30;
@@ -45,8 +55,7 @@ var timeInterval = setInterval(function(){
 
     if (timeLeft === 0 ) {
         clearInterval(timeInterval);
-        
-    }   
+        }   
     document.querySelector("#time").textContent = timeLeft;
     console.log(timeLeft);
     
@@ -58,7 +67,6 @@ var timeInterval = setInterval(function(){
 
 
 // GIVEN I am taking a code quiz
-
 
 // WHEN I answer a question
 // THEN I am presented with another question
