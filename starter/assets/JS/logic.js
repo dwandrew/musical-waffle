@@ -33,14 +33,19 @@ function hideStart () {
     document.getElementById("start-screen").hidden = true;
 }
 
+var pies = quizQuestions; //tuns the array into a var
+
+
 function showQuestion1 () { 
-    document.getElementById("questions").className = "start"; 
-    document.querySelector("#questions").textContent = quizQuestions[1]; 
+        
+    document.getElementById("questions").className = "start"; // changes the class name for the 'questions' html section.
     
+    document.querySelector("#questions").textContent = JSON.stringify(pies[1].question); 
+    
+   
     // How to send part of the array out as a text 
     
     
-    console.log(swine);
 
 
 } 

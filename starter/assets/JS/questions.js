@@ -1,6 +1,7 @@
 var swine = "swine";
 
-var quizQuestions = [{
+var quizQuestions = [
+    {
 
     question: "how many pies?",
     answers: [
