@@ -46,23 +46,16 @@ function showQuestionTitle () {
 
 function renderAnswers () {
     
-    choices.innerHTML ="";
-    
-    for (var i = 0; i < questions.length; i++) {
-        var answers = questions[1].answers;
-        
-        var li = document.createElement("li");
-        li.textContent = questions.answers;
-        li.setAttribute("choices", i);
-        document.querySelector("#choices").textContent = JSON.stringify(li.textContent);
+    // vertically ordered list of buttons made from an array
 
+    document.querySelector("#choice1").textContent = JSON.stringify(questions[1].answers[0]); //variable was declared twice! Made the code not work
+    document.querySelector("#choice2").textContent = JSON.stringify(questions[1].answers[1]); //variable was declared twice! Made the code not work
+    document.querySelector("#choice3").textContent = JSON.stringify(questions[1].answers[2]); //variable was declared twice! Made the code not work
+    document.querySelector("#choice4").textContent = JSON.stringify(questions[1].answers[3]); //variable was declared twice! Made the code not work
 
-        console.log(answers);
-    }
-
-    // document.querySelector("#choices").textContent = JSON.stringify(questions[1].answers[0]); //variable was declared twice! Made the code not work
-    
+     
 }
+
 
 
 
