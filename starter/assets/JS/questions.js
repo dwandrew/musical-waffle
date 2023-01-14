@@ -1,18 +1,17 @@
-var swine = "swine";
 
 var quizQuestions = [
     {
 
     question: "how many pies?",
     answers: [
-        "1",
+        "one",
         "2",
         "3"
     ],
     correctAnswerIndex: 3
 }, 
 {    
-    question: "how many eels?",
+    question: "how many eels in my pot?",
     answers: [
     "1",
     "2",

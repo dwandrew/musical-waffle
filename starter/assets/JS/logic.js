@@ -6,10 +6,11 @@
 var timer = document.querySelector("#time"); 
 var start = document.querySelector("#start");
 var startScreen = document.querySelector("#start-screen");
-var questions = document.querySelector("#questions");
-var questionsTitle = document.querySelector("#questions-title");
-var questions = document.querySelector("#questions");
-var questionTitle = document.querySelector("#question-title");
+var questionsDiv = document.querySelector("#questions");
+var questionsTitle = document.querySelector("#question-title");
+var choices = document.querySelector("#choices"); 
+
+
 // WHEN I click the start button
 // THEN a timer starts and I am presented with a question
     
@@ -18,8 +19,9 @@ function clickStart () {
         
         countDown();
         hideStart();
-        showQuestion1();
-               
+        showQuestionTitle();
+        renderAnswers();
+                       
     });
 }
 clickStart();
@@ -33,22 +35,37 @@ function hideStart () {
     document.getElementById("start-screen").hidden = true;
 }
 
-var pies = quizQuestions; //tuns the array into a var
+var questions = quizQuestions; //tuns the array into a var
 
-
-function showQuestion1 () { 
-        
+function showQuestionTitle () { 
+    
     document.getElementById("questions").className = "start"; // changes the class name for the 'questions' html section.
-    
-    document.querySelector("#questions").textContent = JSON.stringify(pies[1].question); 
-    
-   
-    // How to send part of the array out as a text 
-    
-    
-
-
+    document.querySelector("#question-title").textContent = JSON.stringify(questions[1].question); 
+        
 } 
+
+function renderAnswers () {
+    
+    choices.innerHTML ="";
+    
+    for (var i = 0; i < questions.length; i++) {
+        var answers = questions[1].answers;
+        
+        var li = document.createElement("li");
+        li.textContent = questions.answers;
+        li.setAttribute("choices", i);
+        document.querySelector("#choices").textContent = JSON.stringify(li.textContent);
+
+
+        console.log(answers);
+    }
+
+    // document.querySelector("#choices").textContent = JSON.stringify(questions[1].answers[0]); //variable was declared twice! Made the code not work
+    
+}
+
+
+
 // sets timer - Works!
 
 var timeLeft = 30;
