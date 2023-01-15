@@ -48,13 +48,34 @@ function renderAnswers () {
     
     // vertically ordered list of buttons made from an array
 
+    // document.getElementById("#choices").style.alignItems = "stretch";
+
     document.querySelector("#choice1").textContent = JSON.stringify(questions[1].answers[0]); //variable was declared twice! Made the code not work
     document.querySelector("#choice2").textContent = JSON.stringify(questions[1].answers[1]); //variable was declared twice! Made the code not work
     document.querySelector("#choice3").textContent = JSON.stringify(questions[1].answers[2]); //variable was declared twice! Made the code not work
     document.querySelector("#choice4").textContent = JSON.stringify(questions[1].answers[3]); //variable was declared twice! Made the code not work
-
-     
+    
 }
+
+function clickOnAnswers () {
+
+    document.getElementById("questions").addEventListener("click", function () {
+        
+        // if (answers = correctAnswerIndex) {
+        //     console.log("Uvavu")
+        // } 
+
+        console.log("Eranu!");
+        console.log("Uvavu!")
+    }
+    );
+}
+    clickOnAnswers(); 
+
+    // event listener on buttons, IF value of button selected 
+    // === to correct answer index then print correct. 
+    // then change questions
+    // else - incorrect answer and subtract 10seconds from clock
 
 
 

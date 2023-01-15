@@ -9,8 +9,9 @@ var quizQuestions = [
         "3",
         "I dunno",
     ],
-    correctAnswerIndex: 3
+        correctAnswerIndex: 3
 }, 
+
 {    
     question: "how many eels in my pot?",
     answers: [
@@ -19,7 +20,7 @@ var quizQuestions = [
     "3",
     "congratulations! you win an eel!"
 
-],
+    ],
 correctAnswerIndex: 3
 }
     ]
