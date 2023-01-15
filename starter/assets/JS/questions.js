@@ -15,12 +15,12 @@ var quizQuestions = [
 {    
     question: "how many eels in my pot?",
     answers: [
-    "1",
+    "Many, many eels",
     "2 or maybe more, it's hard to tell",
-    "3",
-    "congratulations! you win an eel!"
+    "What sort of a question is this?",
+    "17 glorious shiny eels?"
 
-    ],
+],
 correctAnswerIndex: 3
 }
     ]

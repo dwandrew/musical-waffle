@@ -9,7 +9,7 @@ var startScreen = document.querySelector("#start-screen");
 var questionsDiv = document.querySelector("#questions");
 var questionsTitle = document.querySelector("#question-title");
 var choices = document.querySelector("#choices"); 
-
+var questions = quizQuestions; //tuns the array into a var
 
 // WHEN I click the start button
 // THEN a timer starts and I am presented with a question
@@ -35,7 +35,7 @@ function hideStart () {
     document.getElementById("start-screen").hidden = true;
 }
 
-var questions = quizQuestions; //tuns the array into a var
+
 
 function showQuestionTitle () { 
     
@@ -59,17 +59,47 @@ function renderAnswers () {
 
 function clickOnAnswers () {
 
-    document.getElementById("questions").addEventListener("click", function () {
+    // document.getElementById("questions").addEventListener("click", function () {
         
-        // if (answers = correctAnswerIndex) {
-        //     console.log("Uvavu")
-        // } 
+        let buttonList = document.querySelectorAll("button");
 
-        console.log("Eranu!");
-        console.log("Uvavu!")
+        var answerSelected = buttonList.forEach(function(i){
+            i.addEventListener("click", function(e){
+              console.log(e.target.innerHTML);
+                          })
+          })
+
+        //   console.log(answerSelected);
+
+        // if (value of selected answer === quizQuestions[1].correctAnswerIndex); {         {
+            // console.log("Uvavu");
+         
+            // creates a new paragraph under the questions. 
+            const para = document.createElement("p");
+            const node = document.createTextNode("Uvavu!" + "Congratulations! you win an eel!");
+            para.appendChild(node);
+            const element = document.getElementById("questions");
+            element.appendChild(para);
+            
+            // To do:
+            //play sound
+            // clear everything
+            // move to question round 2
+
+        // }
+ 
+
+        
+        // console.log("Eranu!");
+        // console.log("Uvavu!")
+        // console.log(quizQuestions[0].correctAnswerIndex) - selects the correct index
+        // console.log(clickOnAnswers);
     }
-    );
-}
+//     );
+
+
+// }
+
     clickOnAnswers(); 
 
     // event listener on buttons, IF value of button selected 
