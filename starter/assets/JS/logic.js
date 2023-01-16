@@ -69,30 +69,39 @@ function clickOnAnswers () {
                           })
           })
 
-        //   console.log(answerSelected);
+          console.log(answerSelected);
+        //   betweenQuestionsInterval();
 
-        // if (value of selected answer === quizQuestions[1].correctAnswerIndex); {         {
-            // console.log("Uvavu");
-         
+        // if (button.textContent === "certain value") {run the following code}
+        // if () 
+     
+        {
+            console.log("Uvavu");
+            
+
             // creates a new paragraph under the questions. 
             const para = document.createElement("p");
             const node = document.createTextNode("Uvavu!" + "Congratulations! you win an eel!");
             para.appendChild(node);
             const element = document.getElementById("questions");
             element.appendChild(para);
+           
             
+        }                            
             // To do:
             //play sound
             // clear everything
             // move to question round 2
 
-        // }
+        // 
  
 
         
         // console.log("Eranu!");
         // console.log("Uvavu!")
-        // console.log(quizQuestions[0].correctAnswerIndex) - selects the correct index
+        // console.log(quizQuestions[1].correctAnswerIndex); 
+        // - selects the correct index
+
         // console.log(clickOnAnswers);
     }
 //     );
@@ -129,7 +138,19 @@ var timeInterval = setInterval(function(){
 
 }
 
-// countDown();
+// sets a gap between question rounds
+var betweenQuestionsTimeGap = 1
+
+function betweenQuestionsInterval () {
+    var timeoutInterval = setInterval(function()
+    { betweenQuestionsTimeGap--;
+        if (betweenQuestionsTimeGap === 0) {
+            clearInterval(timeoutInterval);
+        }
+
+    }, 1000);
+    alert("wooga");
+}
 
 
 // GIVEN I am taking a code quiz

@@ -21,6 +21,6 @@ var quizQuestions = [
     "17 glorious shiny eels?"
 
 ],
-correctAnswerIndex: 3
+correctAnswerIndex: 4
 }
     ]
