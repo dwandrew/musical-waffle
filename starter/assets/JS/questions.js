@@ -9,7 +9,7 @@ var quizQuestions = [
         "3",
         "I dunno",
     ],
-        correctAnswerIndex: 3
+        correctAnswerIndex: 2
 }, 
 
 {    
@@ -21,6 +21,6 @@ var quizQuestions = [
     "17 glorious shiny eels?"
 
 ],
-correctAnswerIndex: 4
+correctAnswerIndex: 3
 }
     ]
